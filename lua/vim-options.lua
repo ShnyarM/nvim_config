@@ -1,6 +1,10 @@
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
+vim.keymap.set("n", "-", [[<cmd>horizontal resize -5<cr>]])
+vim.keymap.set("n", ".", [[<cmd>horizontal resize +5<cr>]])
+vim.keymap.set("n", "ö", [[<cmd>vertical resize +5<cr>]])
+vim.keymap.set("n", "ä", [[<cmd>vertical resize -5<cr>]])
 vim.g.mapleader = " "

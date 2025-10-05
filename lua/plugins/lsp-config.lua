@@ -22,7 +22,7 @@ return {
             vim.lsp.enable('ts_ls')
 
             vim.lsp.config['ocamllsp'] = {
-                cmd = { '/home/shnyar/.opam/4.14.2/bin/ocamllsp' },
+                cmd = { 'ocamllsp' },
                 filetypes = {
                     'ocaml',
                     'ocaml.interface',
