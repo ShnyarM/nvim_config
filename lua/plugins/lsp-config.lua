@@ -8,7 +8,7 @@ return {
     {
         "williamboman/mason-lspconfig.nvim",
         config = function()
-            require("mason-lspconfig").setup({ ensure_installed = {"lua_ls", "ts_ls"}
+            require("mason-lspconfig").setup({ ensure_installed = {"lua_ls", "ts_ls", "clangd"}
             })
         end
     },
@@ -20,6 +20,9 @@ return {
 
             vim.lsp.config('ts_ls', {})
             vim.lsp.enable('ts_ls')
+
+            vim.lsp.config("clangd", {})
+            vim.lsp.enable("clangd")
 
             vim.lsp.config['ocamllsp'] = {
                 cmd = { 'ocamllsp' },
