@@ -5,6 +5,7 @@ return {
         local config = require("nvim-treesitter.configs")
         config.setup({
             ensure_installed={"lua", "javascript", "c", "ocaml"},
+            auto_install = true, -- automatically installs the parser of languages we open for which we dont have any
             highlight = {enable = true},
             indent = { enable = true},
         })

@@ -1,3 +1,4 @@
+-- file system
 return {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -7,6 +8,6 @@ return {
         "nvim-tree/nvim-web-devicons" 
     },
     config=function()
-        vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
+        vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle left<CR>')
     end
 }
