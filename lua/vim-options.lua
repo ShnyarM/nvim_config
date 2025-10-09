@@ -8,3 +8,4 @@ vim.keymap.set("n", ".", [[<cmd>horizontal resize +5<cr>]])
 vim.keymap.set("n", "ö", [[<cmd>vertical resize +5<cr>]])
 vim.keymap.set("n", "ä", [[<cmd>vertical resize -5<cr>]])
 vim.g.mapleader = " "
+vim.api.nvim_create_user_command("OpenRepositories", "cd $HOME/repositories | Alpha", {})
