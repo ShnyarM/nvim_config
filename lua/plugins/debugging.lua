@@ -44,7 +44,14 @@ return{
         program = function()
           return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
         end,
-        args = {}, -- provide arguments if needed
+        args = function()
+          local inp = vim.fn.input('Arguments: ')
+          local list = {}
+          for i in string.gmatch(inp, "%S+") do
+            table.insert(list, i)
+          end
+          return list
+        end,
         cwd = "${workspaceFolder}",
         stopAtBeginningOfMainSubprogram = false,
       },
